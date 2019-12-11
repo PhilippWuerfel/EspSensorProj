@@ -4,8 +4,8 @@
 #include <ArduinoOTA.h>
 
 #ifndef STASSID
-#define STASSID "FredsG6"//"TransEatSleepRepeat"
-#define STAPSK  "stirnbandhefterkoks"//"Eat5$BurgerDrink8CervezaSleep6HoursRepeat"
+#define STASSID "SiPommesNo"//"FredsG6"//"TransEatSleepRepeat"
+#define STAPSK  "QuadroCalzones133$"//"stirnbandhefterkoks"//"Eat5$BurgerDrink8CervezaSleep6HoursRepeat"
 #endif
 
 class WifiManager{
@@ -19,5 +19,4 @@ class WifiManager{
 
         void connect();
         void handleUpdates();
-        // think about adding sleep mode etc.
 };
