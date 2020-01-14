@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphWindow</class>
+ <widget class="QDialog" name="GraphWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1162</width>
+    <height>586</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab1Temperature">
+      <attribute name="title">
+       <string>Temperature</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="mainGridLayout_tab1">
+         <item row="1" column="0">
+          <widget class="ChartView" name="temperatureGraph"/>
+         </item>
+         <item row="1" column="2">
+          <layout class="QGridLayout" name="gridLayout_2" columnstretch="0">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetFixedSize</enum>
+           </property>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="btnResetTempAxis">
+             <property name="text">
+              <string>Reset Axis</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="xmaxValueTemp">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>x-maxVal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLineEdit" name="xminValueTemp">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maxLength">
+                <number>32789</number>
+               </property>
+               <property name="placeholderText">
+                <string>x-minVal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="yminValueTemp">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>y-minVal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="ymaxValueTemp">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>y-maxVal</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="7" column="0">
+            <widget class="QPushButton" name="btnRefreshTemp">
+             <property name="text">
+              <string>Refresh</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Adjust axis range:</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="btnApplyTemp">
+             <property name="text">
+              <string>Apply</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab2Humidity">
+      <attribute name="title">
+       <string>Humidity</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="mainGridLayout_tab2">
+         <item row="1" column="0">
+          <widget class="ChartView" name="humidityGraph"/>
+         </item>
+         <item row="1" column="2">
+          <layout class="QGridLayout" name="gridLayout_8" columnstretch="0">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetFixedSize</enum>
+           </property>
+           <item row="2" column="0">
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="xmaxValueHum">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>x-maxVal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLineEdit" name="xminValueHum">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maxLength">
+                <number>32789</number>
+               </property>
+               <property name="placeholderText">
+                <string>x-minVal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="yminValueHum">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>y-minVal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="ymaxValueHum">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>y-maxVal</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Adjust axis range:</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="btnApplyHum">
+             <property name="text">
+              <string>Apply</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="btnResetHumAxis">
+             <property name="text">
+              <string>Reset Axis</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QPushButton" name="btnRefreshHum">
+             <property name="text">
+              <string>Refresh</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ChartView</class>
+   <extends>QGraphicsView</extends>
+   <header>chartview.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>temperatureGraph</tabstop>
+  <tabstop>xminValueTemp</tabstop>
+  <tabstop>xmaxValueTemp</tabstop>
+  <tabstop>yminValueTemp</tabstop>
+  <tabstop>ymaxValueTemp</tabstop>
+  <tabstop>btnApplyTemp</tabstop>
+  <tabstop>btnRefreshTemp</tabstop>
+  <tabstop>humidityGraph</tabstop>
+  <tabstop>xminValueHum</tabstop>
+  <tabstop>xmaxValueHum</tabstop>
+  <tabstop>yminValueHum</tabstop>
+  <tabstop>ymaxValueHum</tabstop>
+  <tabstop>btnApplyHum</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
