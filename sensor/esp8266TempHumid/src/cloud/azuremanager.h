@@ -1,24 +1,28 @@
-#include <time.h>
-#include <HardwareSerial.h>
-#include <AzureIoTHub.h>
-// #include <AzureIoTProtocol_HTTP.h>
-#include <AzureIoTProtocol_MQTT.h>
+// currently not activated as there is no connection to azure-cloud necessary (reached via gateway with MQTT)
 
-// Times before 2010 (1970 + 40 years) are invalid
-#define MIN_EPOCH 40 * 365 * 24 * 3600
+// #include <time.h>
+// #include <HardwareSerial.h>
+// #include <AzureIoTHub.h>
+// // #include <AzureIoTProtocol_HTTP.h>
+// #include <AzureIoTProtocol_MQTT.h>
 
-#define IOT_CONFIG_CONNECTION_STRING "HostName=iottest8266.azure-devices.net;DeviceId=ESP8266;SharedAccessKey=wF8UYMSkHJmEfj6CyxUTVRbmJr78rPLK6poTFh4K9g4="
+// // #include<string>
 
-class AzureManager{
+// #define IOT_CONFIG_CONNECTION_STRING "HostName=iottest8266.azure-devices.net;DeviceId=ESP8266;SharedAccessKey=wF8UYMSkHJmEfj6CyxUTVRbmJr78rPLK6poTFh4K9g4="
+// // #define IOT_CONFIG_CONNECTION_STRING "HostName=TemperatureAndHumidity.azure-devices.net;DeviceId=raspberrypi;SharedAccessKey=fRqt8STDhQZpoGwgS7NcgmeNpp+v3o7Jte7O0uM0mw0="
 
-    private:
-        IOTHUB_CLIENT_LL_HANDLE iotHubClientHandle = nullptr;
-        // tbd
-    public:
-        AzureManager();
-        ~AzureManager();
+// class AzureManager{
+
+//     private:
+//         IOTHUB_CLIENT_LL_HANDLE iotHubClientHandle = nullptr;
+//         const char *connectionString;
+//         // tbd
+//     public:
+//         AzureManager();
+//         AzureManager(const char *connectionString);
+//         ~AzureManager();
         
-        void sendMsg(char msg[]);
-        // tbd
+//         void sendMsg(char msg[]);
+//         // tbd
 
-};
+// };
