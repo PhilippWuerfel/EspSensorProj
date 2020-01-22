@@ -6,6 +6,8 @@ WifiManager::~WifiManager(){
 };
 
 void WifiManager::connect(){
+    // resource check on: https://www.youtube.com/watch?v=lXchL3hpDO4
+
     Serial.println("Booting...");    
     WiFi.mode(WIFI_STA);
     WiFi.begin(STASSID, STAPSK);
