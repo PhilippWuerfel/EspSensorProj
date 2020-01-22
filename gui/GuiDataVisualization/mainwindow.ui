@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>778</width>
-    <height>480</height>
+    <width>625</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -995,7 +995,7 @@
          <bool>true</bool>
         </property>
         <property name="frameShape">
-         <enum>QFrame::WinPanel</enum>
+         <enum>QFrame::Box</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
@@ -1044,7 +1044,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>778</width>
+     <width>625</width>
      <height>21</height>
     </rect>
    </property>

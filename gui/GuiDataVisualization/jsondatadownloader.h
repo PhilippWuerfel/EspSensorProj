@@ -1,19 +1,18 @@
-//#ifndef JSONDATADOWNLOADER_H
-//#define JSONDATADOWNLOADER_H
+#ifndef JSONDATADOWNLOADER_H
+#define JSONDATADOWNLOADER_H
 
-//#include <QString>
-//#include <QJsonDocument>
-//#include <QJsonArray>
-//#include <QFile>
+#include <QString>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QFile>
 
-//class JsonDataDownloader
-//{
-//public:
-//    JsonDataDownloader();
-//  static  QJsonArray getDataArray();
-//  //  QJsonObject getLastDataPoint();
-//private:
-// static   QJsonDocument downloadJsonData();//QJsonArray dataArray);    DELETE
-//};
+class JsonDataDownloader
+{
+public:
+    JsonDataDownloader();
+  static  QJsonArray getDataArray();    // returns a QJsonArray of the measurements data
+private:
+ static   QJsonDocument downloadJsonData(); // retrieves the sensor data from the database
+};
 
-//#endif // JSONDATADOWNLOADER_H
+#endif // JSONDATADOWNLOADER_H

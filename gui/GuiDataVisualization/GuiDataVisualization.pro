@@ -43,3 +43,5 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
     graphwindow.ui
+
+RC_ICONS = appicon.ico

@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include "graphwindow.h"
 #include <QJsonObject>
-#include <QJsonDocument> //DELETE
 
 namespace Ui {
 class MainWindow;
@@ -17,21 +16,16 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void createGraph();
 
 private slots:
-    void on_btnShowChartWindow_clicked();
-
-    void on_refreshButton_clicked();
+    void on_btnShowChartWindow_clicked();   // opens the window with the chart diagrams
+    void on_refreshButton_clicked();        // reloads the data
 
 private:
     Ui::MainWindow *ui;
-    GraphWindow *graphWindow;
-    QString readJson();
-    void createHumidityPie();
-    QJsonObject getNewestDataPoint();
-    QJsonDocument downloadJsonDataOnline(); //DELETE -> oder siehe .cpp
-    void refresh();
+    GraphWindow *graphWindow;               // necessary for the second window
+    QJsonObject getNewestDataPoint();       // return a QJsonObject the newest measurement point
+    void refresh();                         // downloads the newest data and displays it
 
 };
 

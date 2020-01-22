@@ -2,10 +2,6 @@
 #define GRAPHWINDOW_H
 
 #include <QDialog>
-#include "jsondatadownloader.h"
-#include <QJsonDocument>    //TEST
-#include <QtCharts/QChartView> //TEST
-QT_CHARTS_USE_NAMESPACE //TEST
 
 namespace Ui {
 class GraphWindow;
@@ -20,23 +16,16 @@ public:
     ~GraphWindow();
 
 private slots:
-    void on_btnApplyTemp_clicked();
-    void on_btnRefreshTemp_clicked();
-
-    void on_btnResetTempAxis_clicked();
-
-    void on_btnApplyHum_clicked();
-
-    void on_btnResetHumAxis_clicked();
-
-    void on_btnRefreshHum_clicked();
+    void on_btnApplyTemp_clicked();     // temperature chart: applies axis changes
+    void on_btnResetTempAxis_clicked(); // temperature chart: sets the axis to default
+    void on_btnRefreshTemp_clicked();   // temperature chart: calls refresh()
+    void on_btnApplyHum_clicked();      // humidity chart: applies axis changes
+    void on_btnResetHumAxis_clicked();  // humidity chart: sets the axis to default
+    void on_btnRefreshHum_clicked();    // humidity chart: calls refresh()
 
 private:
     Ui::GraphWindow *ui;
-    void createGraph(); // DELETE -> sollte über andere Klassen geregelt sein
-    QJsonDocument downloadJsonDataOnline();//TEST
-    QChart* createLineGraphs(QJsonArray sensorData);
-    void refresh();
+    void refresh();                     //reloads the data and redraws the charts
 };
 
 #endif // GRAPHWINDOW_H
