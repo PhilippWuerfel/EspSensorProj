@@ -1,4 +1,34 @@
-// currently not activated as there is no connection to azure-cloud necessary (reached via gateway with MQTT)
+/**
+ * ** GNU General Public License Usage
+ ** This file may be used under the terms of the GNU
+ ** General Public License version 3 or (at your option) any later version
+ ** approved by the KDE Free Qt Foundation. The licenses are as published by
+ ** the Free Software Foundation and appearing in the file LICENSE.GPL3
+ ** included in the packaging of this file. Please review the following
+ ** information to ensure the GNU General Public License requirements will
+ ** be met: https://www.gnu.org/licenses/gpl-3.0.html.* 
+ * 
+ * CURRENTLY DEACTIVATED as there is currently no connection to azure-cloud necessary (reached via gateway with MQTT)
+ * 
+ * 
+ * description     :Manager which handles the communication to AzureCloud via IoT-Hub
+ * 
+ * variables       :
+ *                 private
+ *                  connectionString -> connection string which will establish the connection to the wanted adress
+ * 
+ * methods         :
+ *                 public
+ *                  AzureManager() and ~AzureManager() -> Constructor and Destructor
+ *                  sendMsg(char msg[]) -> sends the measurement data to AzureCloud
+ *                                         parameter is a char array which will be basically in json format
+ *                  
+ * author          :Philipp Wuerfel
+ * date            :2019-11-15
+ * version         :1.0
+ * notes           :Currently deactivated
+ * language        :C++
+*/
 
 // #include <time.h>
 // #include <HardwareSerial.h>

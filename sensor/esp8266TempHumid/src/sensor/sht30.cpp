@@ -1,5 +1,4 @@
 #include "sht30.h"
-//#include <WEMOS_SHT3X.h>
 
 Sht30::Sht30(){
   sht30 = SHT3X(0x45);

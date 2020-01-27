@@ -8,14 +8,19 @@ WifiManager::~WifiManager(){
 void WifiManager::connect(){
     // resource check on: https://www.youtube.com/watch?v=lXchL3hpDO4
 
+    // establish WiFi connection
     Serial.println("Booting...");    
-    WiFi.mode(WIFI_STA);
-    WiFi.begin(STASSID, STAPSK);
+    WiFi.mode(WIFI_STA); // setup WiFi mode
+    WiFi.begin(STASSID, STAPSK);  // connect to WiFi network via the given id and pw
+
+    // connect till status WL_CONNECTED retrieved
     while (WiFi.waitForConnectResult() != WL_CONNECTED) {
         Serial.println("Connection Failed! Rebooting...");
         delay(5000);
         ESP.restart();
     }
+
+    // establish ArduinoOTA-protocoll and handle all necessarry / possible OTA-Status
     ArduinoOTA.onStart([]() {
         String type;
         if (ArduinoOTA.getCommand() == U_FLASH) {
@@ -49,6 +54,7 @@ void WifiManager::connect(){
     ArduinoOTA.begin();
     Serial.println("Ready to rumble");
     
+    // print IP adress which could be used in MQTT Broker
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
     Serial.println();
